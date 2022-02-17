@@ -1,0 +1,6 @@
+name: T7 Monitor
+type: module
+description: Provide an uncached internal page because we have found that monitoring just the front page of sites does not always work.
+package: Custom
+core: 8.x
+core_version_requirement: ^8 || ^9

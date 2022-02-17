@@ -1,0 +1,9 @@
+t7_monitor.page:
+  path: '/t7-monitor'
+  defaults:
+    _title: 'T7 Monitor'
+    _controller: '\Drupal\t7_monitor\Controller\T7MonitorController::build'
+  requirements:
+    _permission: 'access content'
+  options:
+    no_cache: TRUE
