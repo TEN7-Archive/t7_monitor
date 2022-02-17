@@ -12,8 +12,10 @@ class T7MonitorTest extends T7ExistingSiteBase {
   function testT7Monitor() {
     $this->drupalGet('t7-monitor');
     $this->assertSession()->statusCodeEquals(200);
-    $headers = $this->getCurrentPageContent();
-    $this->assertStringContainsString('<meta name="robots" content="noindex, nofollow" />', $headers);
+    $page_content = $this->getCurrentPageContent();
+    $this->assertStringContainsString('<meta name="robots" content="noindex, nofollow" />', $page_content);
+    $this->assertSession()->responseHeaderEquals('Cache-Control' , 'must-revalidate, no-cache, private');
+    $this->assertSession()->responseHeaderEquals('X-Drupal-Dynamic-Cache', 'UNCACHEABLE');
   }
 
 }
