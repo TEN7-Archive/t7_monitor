@@ -4,7 +4,7 @@ This is a simple module that creates a non-cacheable page on a Drupal 9 website 
 
 ## How to Install in Composer
 
-#Locate the "repositories" key in your composer.json file and paste the following:
+Locate the "repositories" key in your composer.json file and paste the following:
 
 ```     
 {
